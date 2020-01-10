@@ -1,0 +1,27 @@
+{
+  "name": "vcard",
+  "version": "1.0.0",
+  "description": "Virtual business card generator",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strockerlabs/VCard.git"
+  },
+  "keywords": [
+    "vcard",
+    "business"
+  ],
+  "author": "Sebastian Rivera Soto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/strockerlabs/VCard/issues"
+  },
+  "homepage": "https://github.com/strockerlabs/VCard#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "vcards-js": "^2.10.0"
+  }
+}
