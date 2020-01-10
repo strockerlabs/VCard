@@ -5,7 +5,7 @@ const app = express();
 
 //localhost:5000/Sebastián/Rivera/+50688887316/srivera@strockerlabs.com/sebastián-rivera-soto-237213140/sebasrs
 
-const PORT = 5000 | process.env.PORT;
+const PORT = process.env.PORT | 5000;
 
 app.get('/', (req, res) => {
   res.send("Alive");
