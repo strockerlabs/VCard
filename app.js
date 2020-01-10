@@ -7,7 +7,7 @@ const app = express();
 
 const PORT = process.env.PORT || 5000;
 
-app.get('/:fName/:lName/:phone/:email/:linkedin/:git', (req, res) => {
+app.get('/:fName/:lName/:phone/:email/:linkedIn/:git', (req, res) => {
   //create a new vCard
   var vCard = vCardsJS();
 
