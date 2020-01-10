@@ -37,7 +37,7 @@ app.get('/:fName/:lName/:phone/:email/:linkedin/:git', (req, res) => {
   vCard.workAddress.countryRegion = 'Costa Rica';
 
   //set social media URLs
-  vCard.socialUrls['linkedIn'] = `https://www.linkedin.com/in/${req.params.linkedIn}`;
+  vCard.socialUrls['linkedIn'] = `https://www.linkedin.com/in/${req.params.linkedIn}/`;
 
   vCard.version = '3.0'; //can also support 2.1 and 4.0, certain versions only support certain fields
 
