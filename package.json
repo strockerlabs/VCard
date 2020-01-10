@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/strockerlabs/VCard#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "vcards-js": "^2.10.0"
+    "express": "4.17.1",
+    "vcards-js": "2.10.0"
   }
 }
