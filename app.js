@@ -7,6 +7,10 @@ const app = express();
 
 const PORT = 5000 | process.env.PORT;
 
+app.get('/', (req, res) => {
+  res.send("Alive");
+})
+
 app.get('/:fName/:lName/:phone/:email/:linkedin/:git', (req, res) => {
   //create a new vCard
   var vCard = vCardsJS();
