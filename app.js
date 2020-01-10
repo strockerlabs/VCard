@@ -16,9 +16,6 @@ app.get('/:fName/:lName/:phone/:email/:linkedin/:git', (req, res) => {
   vCard.lastName = req.params.lName;
   vCard.organization = "Strocker Labs";
 
-  //link to image
-  vCard.photo.attachFromUrl('https://media-exp1.licdn.com/dms/image/C4E03AQGrB7GiCZXw9Q/profile-displayphoto-shrink_200_200/0?e=1583971200&v=beta&t=SzzozmSN6RSktmMip_rbVrVBkiyn3pEyEaszk5KcDO4', 'JPEG');
-
   vCard.workPhone = req.params.phone;
   vCard.title = 'Software Developer';
   vCard.url = `https://www.github.com/${req.params.git}`;
@@ -30,9 +27,6 @@ app.get('/:fName/:lName/:phone/:email/:linkedin/:git', (req, res) => {
 
   //set email addresses
   vCard.workEmail = req.params.email;
-
-  //set logo of organization or personal logo (also supports embedding, see above)
-  vCard.logo.attachFromUrl('https://scontent.fsyq3-1.fna.fbcdn.net/v/t1.0-9/79306434_102788367888517_4531759348518486016_n.jpg?_nc_cat=109&_nc_ohc=cz62V3v7k64AX-i0WyZ&_nc_ht=scontent.fsyq3-1.fna&oh=eddbfb867ec2cefa9471fe73a6356285&oe=5EA73EA3', 'JPEG');
 
   //set address information
   vCard.workAddress.label = 'Oficina';
