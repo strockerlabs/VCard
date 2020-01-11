@@ -1,5 +1,7 @@
 const express = require('express');
 const vCardsJS = require('vcards-js');
+require('babel-polyfill');
+const brandedQRCode = require('branded-qr-code');
 
 const app = express();
 
@@ -41,12 +43,10 @@ app.get('/:fName/:lName/:phone/:email/:linkedIn/:git', (req, res) => {
 
   vCard.version = '3.0'; //can also support 2.1 and 4.0, certain versions only support certain fields
 
-  //set content-type and disposition including desired filename
-  res.set('Content-Type', `text/vcard; name="${req.params.fName}.vcf"`);
-  res.set('Content-Disposition', `inline; filename="${req.params.fName}.vcf"`);
-
-  //send the response
-  res.send(vCard.getFormattedString());
+  brandedQRCode.generate({ text: vCard.getFormattedString(), path: '../../../strocker.png' })
+    .then(qrcode => {
+      res.end(qrcode, 'binary');
+    })
 });
 
 app.listen(PORT, () => {
