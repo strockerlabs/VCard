@@ -4,9 +4,6 @@ require('babel-polyfill');
 const brandedQRCode = require('branded-qr-code');
 
 const app = express();
-
-//localhost:5000/Sebastián/Rivera/+50688887316/srivera@strockerlabs.com/sebastián-rivera-soto-237213140/sebasrs
-
 const PORT = process.env.PORT || 5000;
 
 app.get('/:fName/:lName/:phone/:email/:linkedIn/:git', (req, res) => {
