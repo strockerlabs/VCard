@@ -9,7 +9,7 @@ const app = express();
 
 const PORT = process.env.PORT || 5000;
 
-app.get('/:fName/:lName/:phone/:email/:linkedIn/:git', (req, res) => {
+app.get('/:fName/:lName/:phone/:email/:git', (req, res) => {
   //create a new vCard
   var vCard = vCardsJS();
 
@@ -37,9 +37,6 @@ app.get('/:fName/:lName/:phone/:email/:linkedIn/:git', (req, res) => {
   vCard.workAddress.stateProvince = 'San José';
   vCard.workAddress.postalCode = '10803';
   vCard.workAddress.countryRegion = 'Costa Rica';
-
-  //set social media URLs
-  vCard.socialUrls['linkedIn'] = `https://www.linkedin.com/in/${req.params.linkedIn}/`;
 
   vCard.version = '3.0'; //can also support 2.1 and 4.0, certain versions only support certain fields
 
